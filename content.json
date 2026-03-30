@@ -1,0 +1,300 @@
+{
+  "_readme": "Edit this file to update the portfolio. Push to GitLab, pull on server. No HTML changes needed.",
+  "_version": "1.0.0",
+
+  "meta": {
+    "name": "Chandrashekhar Bhosale",
+    "description": "Software Engineer with 8+ years in backend engineering and automation. Creator of DjangoPlay. Pursuing AI Ethics Engineering.",
+    "analytics_id": "G-PPJS3XX6ND"
+  },
+
+  "user": {
+    "eyebrow": "Software Engineer",
+    "name_line1": "Chandrashekhar",
+    "name_line2": "Bhosale",
+    "roles": ["Python", "Django", "Backend Engineering", "AI Ethics"],
+    "summary": "With 8+ years of experience for building software across healthcare, education, and automotive domains. Started in automation — learning how systems break and why correctness is non-negotiable. That foundation shapes everything I build now. At Ridecell I chose Python; after that I built <strong>DjangoPlay</strong> — a production-deployed backend platform with a policy engine, append-only audit log, and fail-closed permissions. The same principles draw me toward <strong>AI Ethics Engineering</strong>: accountability, traceability, systems that behave predictably under pressure.",
+    "social": [
+      {
+        "label": "LinkedIn",
+        "url": "https://www.linkedin.com/in/shekharsv/",
+        "icon": "linkedin"
+      },
+      {
+        "label": "GitLab",
+        "url": "https://gitlab.com/codefleet",
+        "icon": "gitlab"
+      },
+      {
+        "label": "GitHub",
+        "url": "https://github.com/codefleetx",
+        "icon": "github"
+      },
+      {
+        "label": "PyPI",
+        "url": "https://pypi.org/user/binaryfleet/",
+        "icon": "pypi"
+      }
+    ],
+    "photo": "assets/imgs/photo/profile_photo.240x240.png"
+  },
+
+  "pursuing": {
+    "label": "Pursuing",
+    "title_line1": "AI Ethics",
+    "title_line2": "Engineering",
+    "paragraphs": [
+      "AI systems need the same discipline applied to critical backend infrastructure: <strong>auditability</strong> so every decision can be explained, <strong>fail-closed behaviour</strong> so the default is safe, and <strong>identity boundaries</strong> so no actor exceeds their authority.",
+      "My path is to apply this rigour to AI systems — working on infrastructure, tooling, and governance layers that make ML pipelines <strong>transparent, accountable, and correctable</strong>."
+    ],
+    "pillars": [
+      {
+        "icon": "⚖️",
+        "name": "Auditability",
+        "sub": "Every decision attributable. Append-only. Built into DjangoPlay from day one."
+      },
+      {
+        "icon": "🔒",
+        "name": "Fail-Closed Design",
+        "sub": "Deny is the default. Missing permission checks are errors, not passes."
+      },
+      {
+        "icon": "🎯",
+        "name": "Identity Boundaries",
+        "sub": "No actor exceeds authority. Centralised policy, never ad-hoc."
+      },
+      {
+        "icon": "🔍",
+        "name": "Correctness First",
+        "sub": "Knowing how systems break shapes how I build systems that don't."
+      }
+    ]
+  },
+
+  "timeline": {
+    "heading": "From understanding how systems break — to building systems that don't.",
+    "items": [
+      {
+        "period": "2024 – Present",
+        "role": "Independent — Building DjangoPlay",
+        "org": "djangoplay.org",
+        "highlight": true,
+        "desc": "Built a production-deployed Django platform <strong>from scratch</strong>. 16 domain apps, service layer architecture, centralised policy engine, append-only audit log, JWT + Google SSO, OpenAPI 3, subdomain routing via <code>django-hosts</code>, background task infrastructure with Celery, and 3 PyPI libraries extracted from the work. Deployed on Oracle VPS behind Nginx. GitHub Mirroring via CI/CD pipeline using <code>repository_dispatch</code> events.",
+        "tags": ["Python", "Django 5", "DRF", "PostgreSQL", "Redis", "Celery", "Nginx", "Oracle VPS"]
+      },
+      {
+        "period": "2021 – 2024",
+        "role": "Senior Software Engineer — Backend",
+        "org": "Ridecell India, Pune",
+        "highlight": true,
+        "desc": "The pivot. <strong>Chose Python.</strong> Backend work on Django microservices for large-scale automotive telematics — integrating third-party hardware providers, shipping REST APIs, debugging Kubernetes workloads on AWS at pod and service level. Deep PostgreSQL-based root-cause analysis on production issues, observability via Grafana and Sentry. Led PoCs, mentored juniors, reviewed backend architecture.",
+        "tags": ["Python", "Django", "Kubernetes", "AWS", "Grafana", "Sentry", "PostgreSQL"]
+      },
+      {
+        "period": "2018 – 2021",
+        "role": "Senior Quality Engineer — Distributed Systems",
+        "org": "Embold Technologies (acquired by BrowserStack), Pune",
+        "highlight": false,
+        "desc": "Built CI-integrated automation and performance pipelines for a distributed static code analysis platform used by multiple engineering teams. Worked extensively with Dockerised services and container-based test environments. SQL-driven backend validation with PostgreSQL and SQL Server. Partnered with backend and DevOps teams to improve release safety and deployment confidence.",
+        "tags": ["Java", "Jenkins", "JMeter", "TeamCity", "Docker", "Kubernetes", "PostgreSQL", "Linux"]
+      },
+      {
+        "period": "2016 – 2018",
+        "role": "Software Engineer",
+        "org": "ExtraaEdge Multiservices, Pune",
+        "highlight": false,
+        "desc": "Validated REST APIs and backend systems supporting large ReactJS applications. MS SQL Server for backend data validation and analysis. Managed CI/CD workflows via Azure DevOps (VSTS). Performance testing with Apache JMeter. First full exposure to the complete software delivery lifecycle.",
+        "tags": ["Java", "C#", "Azure Pipelines", "JMeter", "Postman", "MS SQL Server"]
+      },
+      {
+        "period": "2012 – 2015",
+        "role": "Automation Engineer → Data Analyst",
+        "org": "CMD Solution · Jombay, Pune",
+        "highlight": false,
+        "desc": "Started with Java and Selenium at <strong>CMD Solutions</strong>, automating validation of a real-time public transport system. Moved into data analysis at <strong>Jombay</strong>: SQL databases, defect tracking, and client feedback loops.",
+        "tags": ["Java", "Selenium WebDriver", "MSSQL", "TestNG", "SQL"]
+      },
+      {
+        "period": "Next",
+        "role": "AI Ethics Engineering",
+        "org": "Applying engineering rigour to AI systems",
+        "highlight": false,
+        "future": true,
+        "desc": "The same principles that make backend systems trustworthy — auditability, fail-closed behaviour, identity boundaries — are precisely what AI systems need. That gap is where I am headed.",
+        "tags": []
+      }
+    ]
+  },
+
+  "featured_project": {
+    "tag": "Independent · Live",
+    "title_line1": "Enterprise-grade Django",
+    "title_line2": "built to explore.",
+    "paragraphs": [
+      "A <strong>modular backend platform</strong> built after leaving full-time employment — a deliberate engineering exercise with no shortcuts. Domain-driven design, service layers, centralised policy engine, append-only audit logging, JWT + Google SSO, subdomain routing, background tasks, and a full OpenAPI 3 schema. Deployed on Oracle VPS behind Nginx.",
+      "Three PyPI libraries were extracted from this project: <strong>genericissuetracker</strong>, <strong>djangoplay-cli</strong>, and <strong>filemerger-cli</strong>."
+    ],
+    "tags": ["Django 5", "DRF", "PostgreSQL", "Redis", "Celery", "JWT + Allauth", "drf-spectacular", "django-hosts", "simple-history", "Nginx", "Oracle VPS"],
+    "links": [
+      { "label": "Open Platform", "url": "/console/", "primary": true },
+      { "label": "View Source →", "url": "https://gitlab.com/djangoplay/djangoplay-web", "primary": false },
+      { "label": "GitHub Mirror →", "url": "https://github.com/codefleetx/djangoplay-web", "primary": false }
+    ],
+    "stats": [
+      { "number": "16", "label": "Domain Apps", "sub": "users, invoices, entities, locations, helpdesk…" },
+      { "number": "5",  "label": "Structured layers", "sub": "Interface → Application → Domain → Platform → Infra" },
+      { "number": "1K+","label": "Source files", "sub": "Models, serializers, services, views, signals, tests" },
+      { "number": "3",  "label": "PyPI packages", "sub": "Libraries extracted and published from this project" },
+      { "number": "∞",  "label": "Audit coverage", "sub": "Every state change attributable — no silent mutations" },
+      { "number": "Auto","label": "GitHub mirroring", "sub": "GitLab → GitHub via repository_dispatch CI/CD pipeline" }
+    ]
+  },
+
+  "oss_libraries": [
+    {
+      "icon": "📁",
+      "icon_bg": "#E8F5E9",
+      "name": "filemerger-cli",
+      "desc": "Merges project files into a single text output. Supports human-readable, LLM-optimised, and compact modes. Built for sharing full code context with AI tools.",
+      "install": "pip install filemerger-cli",
+      "links": {
+        "pypi": "https://pypi.org/project/filemerger-cli/",
+        "source": "https://gitlab.com/binaryfleet/filemerger"
+      }
+    },
+    {
+      "icon": "⚙️",
+      "icon_bg": "#E3F2FD",
+      "name": "djangoplay-cli",
+      "desc": "Developer CLI for the DjangoPlay platform. Manages local development lifecycle — environment encryption, SSL, Redis, Celery, and server startup in a single command.",
+      "install": "pip install djangoplay-cli",
+      "links": {
+        "pypi": "https://pypi.org/project/djangoplay-cli/",
+        "source": "https://gitlab.com/djangoplay/djangoplay-cli"
+      }
+    },
+    {
+      "icon": "🐛",
+      "icon_bg": "#FFF3E0",
+      "name": "genericissuetracker",
+      "desc": "Reusable Django issue tracker library. Full CRUD for issues, comments, attachments, labels, and status history. Host-provided identity and permissions — drop-in integration.",
+      "install": "pip install genericissuetracker",
+      "links": {
+        "pypi": "https://pypi.org/project/genericissuetracker/",
+        "source": "https://gitlab.com/binaryfleet/issuetracker"
+      }
+    }
+  ],
+
+  "repositories": [
+    {
+      "icon": "🏗️",
+      "name": "djangoplay / djangoplay-web",
+      "desc": "Main backend platform — Django, DRF, PostgreSQL, Redis, Celery, Nginx",
+      "url": "https://gitlab.com/djangoplay/djangoplay-web",
+      "badges": ["Python", "Django"]
+    },
+    {
+      "icon": "⚙️",
+      "name": "djangoplay / djangoplay-cli",
+      "desc": "Developer CLI — environment management, server startup, Celery orchestration",
+      "url": "https://gitlab.com/djangoplay/djangoplay-cli",
+      "badges": ["Python", "CLI"]
+    },
+    {
+      "icon": "🐛",
+      "name": "binaryfleet / issuetracker",
+      "desc": "Reusable Django issue tracker library — issues, comments, attachments, labels",
+      "url": "https://gitlab.com/binaryfleet/issuetracker",
+      "badges": ["Python", "Django"]
+    },
+    {
+      "icon": "📁",
+      "name": "binaryfleet / filemerger",
+      "desc": "CLI tool for merging project files — human-readable, LLM, and compact modes",
+      "url": "https://gitlab.com/binaryfleet/filemerger",
+      "badges": ["Python", "CLI"]
+    }
+  ],
+
+  "skills": [
+    {
+      "group": "Backend Engineering",
+      "pursuing": false,
+      "items": [
+        "Python 3.10+",
+        "Django 5 / Django REST Framework",
+        "Domain-driven design",
+        "Service layer architecture",
+        "Celery + Redis",
+        "PostgreSQL + pg_trgm",
+        "JWT / OAuth2 / Google SSO",
+        "OpenAPI 3 / drf-spectacular"
+      ]
+    },
+    {
+      "group": "Infrastructure & DevOps",
+      "pursuing": false,
+      "items": [
+        "Nginx (reverse proxy, static)",
+        "Oracle VPS / AWS / Azure",
+        "Docker + Kubernetes",
+        "Jenkins / TeamCity / Azure Pipelines",
+        "GitLab CI/CD",
+        "Linux (Ubuntu / macOS)"
+      ]
+    },
+    {
+      "group": "Automation & Verification",
+      "pursuing": false,
+      "items": [
+        "API testing (Postman, Newman)",
+        "Performance testing (JMeter)",
+        "Selenium WebDriver (Java, 5+ yrs)",
+        "CI/CD pipeline integration",
+        "Observability (Grafana, Sentry)"
+      ]
+    },
+    {
+      "group": "Tooling & Open Source",
+      "pursuing": false,
+      "items": [
+        "PyPI packaging",
+        "CLI authoring (Click)",
+        "Ruff (linting / import rules)",
+        "simple-history (audit trails)",
+        "django-hosts (subdomain routing)",
+        "Fernet credential encryption"
+      ]
+    },
+    {
+      "group": "Pursuing — AI Ethics",
+      "pursuing": true,
+      "items": [
+        "AI governance frameworks",
+        "Model auditability & explainability",
+        "Responsible ML system design",
+        "Bias detection & fairness tooling",
+        "AI policy & regulatory compliance",
+        "Fail-closed design for ML systems"
+      ]
+    },
+    {
+      "group": "Other Languages",
+      "pursuing": false,
+      "items": [
+        "Java (5+ years)",
+        "C# (testing, Azure)",
+        "JavaScript (frontend, testing)",
+        "SQL (MSSQL, pgSQL)",
+        "HTML + CSS"
+      ]
+    }
+  ],
+
+  "education": {
+    "degree": "Bachelor of Engineering in Information Technology",
+    "institution": "Walchand College of Engineering, Sangli",
+    "year": "2011"
+  }
+}

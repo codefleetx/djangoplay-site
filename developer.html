@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="index, follow" />
+  <title>Developer Portfolio</title>
+
+  <link rel="icon" type="image/png" href="assets/imgs/logo/dp-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="dist/css/bundle.min.css" />
+</head>
+
+<body>
+
+  <div id="stars" aria-hidden="true"></div>
+
+  <!-- ── Left section quick-nav ─────────────────────────────────────────── -->
+  <nav id="section-nav" aria-label="Page sections">
+    <a class="snav-item" href="#section-user">
+      <span class="snav-dot"></span>
+      <span class="snav-label">About</span>
+    </a>
+    <a class="snav-item" href="#section-pursuing">
+      <span class="snav-dot"></span>
+      <span class="snav-label">Pursuing</span>
+    </a>
+    <a class="snav-item" href="#section-journey">
+      <span class="snav-dot"></span>
+      <span class="snav-label">Career Journey</span>
+    </a>
+    <a class="snav-item" href="#section-featured">
+      <span class="snav-dot"></span>
+      <span class="snav-label">Flagship Project</span>
+    </a>
+    <a class="snav-item" href="#section-oss">
+      <span class="snav-dot"></span>
+      <span class="snav-label">Libraries</span>
+    </a>
+    <a class="snav-item" href="#section-repos">
+      <span class="snav-dot"></span>
+      <span class="snav-label">Repositories</span>
+    </a>
+    <a class="snav-item" href="#section-skills">
+      <span class="snav-dot"></span>
+      <span class="snav-label">Stack &amp; Skills</span>
+    </a>
+  </nav>
+
+  <nav role="navigation" aria-label="Main navigation">
+    <a href="index.html" class="nav-logo" aria-label="DjangoPlay home">
+      <img class="icon" src="assets/imgs/logo/dp-icon.png" alt="" />
+      <img class="wordmark" src="assets/imgs/logo/text-logo.png" alt="DjangoPlay" />
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="developer.html" class="active">Developer</a></li>
+      <li><a href="docs/index.html" target="_blank" rel="noopener">Docs</a></li>
+    </ul>
+    <div class="nav-right">
+      <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Switch to space theme"
+        title="Toggle space theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </button>
+      <span class="nav-badge">v1.0.0</span>
+    </div>
+  </nav>
+
+  <div class="page-wrap">
+
+    <!-- user -->
+    <section id="section-user" class="dev-user" aria-labelledby="dev-name-heading">
+      <div class="dev-user-text">
+        <div class="dev-eyebrow" id="user-eyebrow"></div>
+        <h1 class="dev-name" id="dev-name-heading">
+          <span id="user-name-l1"></span><br /><em id="user-name-l2"></em>
+        </h1>
+        <div class="dev-role" id="user-roles"></div>
+        <p class="dev-summary" id="user-summary"></p>
+        <div class="dev-social" id="user-social"></div>
+      </div>
+      <div class="dev-photo-wrap">
+        <img class="dev-photo" id="user-photo" alt="Chandrashekhar Bhosale" width="240" height="240"
+          onerror="this.style.display='none'" />
+      </div>
+    </section>
+
+    <hr class="full-divider" />
+
+    <!-- Pursuing -->
+    <section id="section-pursuing" class="dev-section" aria-labelledby="pursuing-heading">
+      <div class="pursuing-card">
+        <div class="pursuing-left">
+          <div class="pursuing-label" id="pursuing-label"></div>
+          <h2 class="pursuing-title" id="pursuing-heading">
+            <span id="pursuing-title-l1"></span><br /><em id="pursuing-title-l2"></em>
+          </h2>
+          <div id="pursuing-paragraphs"></div>
+        </div>
+        <div class="pursuing-right">
+          <div class="pursuing-pillars" id="pursuing-pillars"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="full-divider" />
+
+    <!-- Career Timeline -->
+    <section id="section-journey" class="dev-section" aria-labelledby="journey-heading">
+      <div class="dev-section-header">
+        <div class="section-label">Career Journey</div>
+        <h2 class="dev-section-title" id="journey-heading"></h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <hr class="full-divider" />
+
+    <!-- Featured Project -->
+    <section id="section-featured" class="dev-section" aria-labelledby="featured-heading">
+      <div class="dev-section-header">
+        <div class="section-label">Flagship Project</div>
+        <h2 class="dev-section-title" id="featured-heading">DjangoPlay</h2>
+        <p class="dev-section-sub">
+          A public, production-deployed Django platform — not a tutorial, a real system.
+        </p>
+      </div>
+      <div class="featured-card">
+        <div class="featured-left">
+          <div class="featured-tag" id="fp-tag"></div>
+          <h3 class="featured-title" id="fp-title"></h3>
+          <div id="fp-paragraphs"></div>
+          <div class="featured-meta" id="fp-meta"></div>
+          <div class="featured-links" id="fp-links"></div>
+        </div>
+        <div class="featured-right">
+          <div class="featured-stats" id="fp-stats"></div>
+        </div>
+      </div>
+    </section>
+
+    <hr class="full-divider" />
+
+    <!-- OSS Libraries -->
+    <section id="section-oss" class="dev-section" aria-labelledby="oss-heading">
+      <div class="dev-section-header">
+        <div class="section-label">Open Source · PyPI</div>
+        <h2 class="dev-section-title" id="oss-heading">Published Libraries</h2>
+        <p class="dev-section-sub">
+          Three packages extracted from real engineering problems, published on PyPI.
+        </p>
+      </div>
+      <div class="oss-grid" id="oss-grid"></div>
+    </section>
+
+    <hr class="full-divider" />
+
+    <!-- Repositories -->
+    <section id="section-repos" class="dev-section" aria-labelledby="repos-heading">
+      <div class="dev-section-header">
+        <div class="section-label">Version Control · GitLab</div>
+        <h2 class="dev-section-title" id="repos-heading">Public Repositories</h2>
+        <p class="dev-section-sub">
+          All public work under
+          <a href="https://gitlab.com/djangoplay" target="_blank" rel="noopener noreferrer"
+            style="color:var(--color-orange);">djangoplay</a>
+          and
+          <a href="https://gitlab.com/binaryfleet" target="_blank" rel="noopener noreferrer"
+            style="color:var(--color-orange);">binaryfleet</a>
+          on GitLab — automatically mirrored to
+          <a href="https://github.com/codefleetx" target="_blank" rel="noopener noreferrer"
+            style="color:var(--color-orange);">GitHub</a>
+          via CI/CD pipeline.
+        </p>
+      </div>
+      <div class="repo-list" id="repo-list"></div>
+    </section>
+
+    <hr class="full-divider" />
+
+    <!-- Skills -->
+    <section id="section-skills" class="dev-section" aria-labelledby="skills-heading">
+      <div class="dev-section-header">
+        <div class="section-label">Technical Skills</div>
+        <h2 class="dev-section-title" id="skills-heading">Stack &amp; Expertise</h2>
+      </div>
+      <div class="skills-grid" id="skills-grid"></div>
+    </section>
+
+  </div><!-- /.page-wrap -->
+
+  <footer>
+
+    <ul class="footer-nav">
+      <div class="footer-logo">
+        <img class="icon" src="assets/imgs/logo/text-logo.png" alt="DjangoPlay" />
+      </div>
+      <div class="footer-nav">        
+        <li><a href="/console/" target="_blank" rel="noopener">Platform</a></li>
+        <li><a href="/docs/index.html" target="_blank" rel="noopener">Docs</a></li>   
+      </div>
+    </ul>
+    <div class="footer-right">
+      &copy; <span id="footer-year"></span> DjangoPlay&nbsp;·[djangoplay.org]
+    </div>
+  </footer>
+
+  <script src="dist/js/bundle.min.js" defer></script>
+
+</body>
+
+</html>
