@@ -1,0 +1,267 @@
+/*
+ * tokens.css — Design Tokens
+ * DjangoPlay Landing Site
+ *
+ * This file is the single source of truth for all design values.
+ * Every colour, spacing unit, font, and radius used across the site
+ * is defined here. Edit this file to change the look of everything.
+ *
+ * Do NOT write colour literals anywhere else. Use var(--token-name).
+ *
+ * Sections:
+ *   1. Colour Palette (light mode)
+ *   2. Space Theme Palette (dark/space mode)
+ *   3. Typography
+ *   4. Spacing Scale
+ *   5. Border Radius
+ *   6. Transitions
+ *   7. Z-index Scale
+ *   8. Component Tokens
+ */
+
+
+/* ─── 1. Colour Palette (light mode, default) ─────────────────────────── */
+
+:root {
+  /* Brand primaries */
+  --color-orange: #F5A623;
+  --color-orange-soft: #FFF4DC;
+  --color-orange-border: rgba(245, 166, 35, 0.20);
+
+  --color-purple: #4A4E8C;
+  --color-purple-soft: #EEEFFE;
+  --color-purple-border: rgba(74, 78, 140, 0.15);
+  --color-purple-hover: rgba(74, 78, 140, 0.08);
+
+  --color-red: #CC2200;
+  --color-red-soft: #FFF0EE;
+
+  --color-green: #22c55e;
+  /* live-dot */
+  --color-green-glow: rgba(34, 197, 94, 0.4);
+
+  /* Neutral ink scale */
+  --color-ink: #111118;
+  --color-ink-2: #444455;
+  --color-ink-3: #888899;
+
+  /* Surface */
+  --color-bg: #FAFAFA;
+  --color-surface: #FFFFFF;
+  --color-rule: #E4E4EE;
+  --color-surface-hover: #F7F7FB;
+
+  /* Semantic text */
+  --color-text-primary: var(--color-ink);
+  --color-text-secondary: var(--color-ink-2);
+  --color-text-tertiary: var(--color-ink-3);
+
+  /* Code syntax */
+  --code-kw: var(--color-purple);
+  --code-cl: #C0392B;
+  --code-fn: #2980B9;
+  --code-st: #27AE60;
+  --code-cm: #BDC3C7;
+  --code-dc: var(--color-orange);
+  --code-ln: var(--color-rule);
+
+  /* Nav */
+  --nav-bg: rgba(250, 250, 250, 0.88);
+  --nav-border: var(--color-rule);
+  --nav-height: 64px;
+}
+
+
+/* ─── 2. Space Theme Overrides ────────────────────────────────────────── */
+
+/*
+ * Applied by adding class="space-theme" to <html>.
+ * theme.js handles the toggle and localStorage persistence.
+ * Only override tokens that differ from the light-mode defaults above.
+ */
+
+.space-theme {
+  --color-bg: #000000;
+  --color-surface: rgba(0, 0, 0, 0.70);
+  --color-rule: rgba(255, 255, 255, 0.12);
+  --color-surface-hover: rgba(255, 255, 255, 0.06);
+
+  --color-ink: #e0f7ff;
+  --color-ink-2: #b3d8e8;
+  --color-ink-3: rgba(224, 247, 255, 0.55);
+
+  --color-text-primary: var(--color-ink);
+  --color-text-secondary: var(--color-ink-2);
+  --color-text-tertiary: var(--color-ink-3);
+
+  --color-orange: #00d4ff;
+  --color-orange-soft: rgba(0, 212, 255, 0.12);
+  --color-orange-border: rgba(0, 212, 255, 0.25);
+
+  --color-purple: #80eaff;
+  --color-purple-soft: rgba(128, 234, 255, 0.10);
+  --color-purple-border: rgba(128, 234, 255, 0.20);
+  --color-purple-hover: rgba(0, 212, 255, 0.08);
+
+  --code-kw: #80eaff;
+  --code-cl: #ff6b6b;
+  --code-fn: #5dade2;
+  --code-st: #58d68d;
+  --code-cm: rgba(224, 247, 255, 0.35);
+  --code-dc: #00d4ff;
+  --code-ln: rgba(255, 255, 255, 0.15);
+
+  --nav-bg: rgba(0, 0, 0, 0.75);
+  --nav-border: rgba(255, 255, 255, 0.10);
+  
+  /* 1. Fix Button Label (Dark text on light blue button) */
+  --btn-primary-bg: #00d4ff;           /* Using your theme cyan */
+  --btn-primary-color: #000000;        /* Black text for high contrast */
+  --btn-primary-hover: #ffffff;        /* White background on hover */
+
+  /* 2. Brighter Stat Numbers (arch-number) */
+  /* This overrides the default var(--color-rule) which is too dark in space theme */
+  --color-rule: rgba(255, 255, 255, 0.25); 
+
+  /* Component Overrides */
+  --card-bg: rgba(0, 0, 0, 0.65);
+  --card-border: rgba(255, 255, 255, 0.15);
+  --code-header-bg: rgba(255, 255, 255, 0.05);  
+}
+
+/* FORCE FIX: This ensures that when <html> has the .space-theme class,
+   the .btn-primary button explicitly changes its text to black.
+*/
+
+html.space-theme .btn-primary {
+    background-color: #00d4ff !important; /* The bright cyan */
+    color: #000000 !important;            /* FORCED Black text */
+    border: none;
+}
+
+html.space-theme .btn-primary:hover {
+    background-color: #ffffff !important; /* Glows white on hover */
+    color: #000000 !important;            /* Stays black for readability */
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.4);
+}
+
+/* ─── 3. Typography ───────────────────────────────────────────────────── */
+
+:root {
+  /* Font stacks */
+  --font-display: 'DM Serif Display', Georgia, serif;
+  --font-body: 'DM Sans', system-ui, sans-serif;
+  --font-mono: 'DM Mono', 'Fira Mono', monospace;
+
+  /* Scale (clamp for fluid sizing) */
+  --text-user: clamp(2.6rem, 4.5vw, 3.8rem);
+  --text-h2: clamp(1.6rem, 2.5vw, 2.1rem);
+  --text-h3: 1.15rem;
+  --text-body: 1rem;
+  --text-small: 0.9rem;
+  --text-micro: 0.75rem;
+  --text-code: 0.8125rem;
+  /* 13px */
+  --text-badge: 0.6875rem;
+  /* 11px */
+}
+
+
+/* ─── 4. Spacing Scale ────────────────────────────────────────────────── */
+
+:root {
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --space-20: 80px;
+  --space-24: 96px;
+  --space-32: 128px;
+
+  --page-max: 1200px;
+  --page-padding: var(--space-12);
+  /* 48px desktop, overridden at breakpoints */
+}
+
+
+/* ─── 5. Border Radius ────────────────────────────────────────────────── */
+
+:root {
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-pill: 100px;
+}
+
+
+/* ─── 6. Transitions ──────────────────────────────────────────────────── */
+
+:root {
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.20s ease;
+  --transition-slow: 0.35s ease;
+  --transition-theme: background 0.4s ease, color 0.4s ease,
+    border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+
+/* ─── 7. Z-index Scale ────────────────────────────────────────────────── */
+
+:root {
+  --z-stars: -1;
+  /* space background */
+  --z-base: 0;
+  --z-above: 10;
+  --z-nav: 100;
+  --z-overlay: 200;
+}
+
+
+/* ─── 8. Component Tokens ─────────────────────────────────────────────── */
+
+:root {
+  /* Buttons */
+  --btn-primary-bg: var(--color-ink);
+  --btn-primary-color: #ffffff;
+  --btn-primary-hover: var(--color-purple);
+
+  /* Cards */
+  --card-bg: var(--color-surface);
+  --card-border: var(--color-rule);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.04), 0 20px 60px rgba(0, 0, 0, 0.06);
+  --card-shadow-hover: 0 4px 20px rgba(74, 78, 140, 0.08);
+  --card-border-hover: rgba(74, 78, 140, 0.30);
+
+  /* Badges / pills */
+  --badge-bg: var(--color-purple-soft);
+  --badge-color: var(--color-purple);
+  --badge-border: var(--color-purple-border);
+
+  /* Code block header */
+  --code-header-bg: #F7F7FB;
+}
+/* 
+.space-theme {
+  --btn-primary-bg: #1da1f2;
+  --btn-primary-color: #ffffff;
+  --btn-primary-hover: #0d8bd9;
+
+  --card-bg: rgba(0, 0, 0, 0.55);
+  --card-border: rgba(255, 255, 255, 0.10);
+  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.30), 0 20px 60px rgba(0, 212, 255, 0.05);
+  --card-shadow-hover: 0 4px 20px rgba(0, 212, 255, 0.12);
+  --card-border-hover: rgba(0, 212, 255, 0.30);
+
+  --badge-bg: rgba(0, 212, 255, 0.10);
+  --badge-color: #00d4ff;
+  --badge-border: rgba(0, 212, 255, 0.22);
+
+  --code-header-bg: rgba(255, 255, 255, 0.04);
+} */

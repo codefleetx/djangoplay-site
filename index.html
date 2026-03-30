@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="DjangoPlay — a modular, enterprise-grade Django backend platform built to showcase real-world Python engineering at its best." />
+  <meta name="robots" content="index, follow" />
+  <title>DjangoPlay Home</title>
+  <link rel="icon" type="image/png" href="assets/imgs/logo/dp-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Mono:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <!--
+    Stylesheet load order matters:
+      1. tokens.css  — CSS custom properties (variables), loaded first so all
+                       subsequent files can reference them.
+      2. base.css    — Reset, nav, footer, shared utilities.
+      3. space-theme.css — Star particle CSS; token overrides live in tokens.css.
+      4. index.css   — Page-specific: user, stack, arch sections.
+  -->
+  <link rel="stylesheet" href="dist/css/bundle.min.css" />
+  <!--
+    theme.js is loaded here (before body renders) to apply the saved theme
+    class to <html> immediately, preventing a flash of the wrong theme.
+  -->
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PPJS3XX6ND"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-PPJS3XX6ND');
+  </script>
+</head>
+
+<body>
+
+  <!-- Star field (shown only in space theme; controlled by CSS + space.js) -->
+  <div id="stars" aria-hidden="true"></div>
+
+  <!-- ── Navigation ──────────────────────────────────────────────────────── -->
+  <nav role="navigation" aria-label="Main navigation">
+
+    <a href="index.html" class="nav-logo" aria-label="DjangoPlay home">
+      <img class="icon" src="assets/imgs/logo/dp-icon.png" alt="" />
+      <img class="wordmark" src="assets/imgs/logo/text-logo.png" alt="DjangoPlay" />
+    </a>
+
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="developer.html">Developer</a></li>
+      <li><a href="/docs/index.html" target="_blank" rel="noopener">Docs</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <!-- Theme toggle: moon = switch to space, sun = switch to light -->
+      <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Switch to space theme"
+        title="Toggle space theme">
+        <!-- Moon icon (visible in light mode) -->
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          aria-hidden="true">
+          <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" />
+        </svg>
+        <!-- Sun icon (visible in space mode) -->
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+          <circle cx="12" cy="12" r="5" />
+          <line x1="12" y1="1" x2="12" y2="3" />
+          <line x1="12" y1="21" x2="12" y2="23" />
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+          <line x1="1" y1="12" x2="3" y2="12" />
+          <line x1="21" y1="12" x2="23" y2="12" />
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+        </svg>
+      </button>
+
+      <span class="nav-badge">v1.0.0</span>
+    </div>
+
+  </nav>
+
+  <div class="main">
+
+    <!-- ── user ──────────────────────────────────────────────────────────── -->
+    <section class="user" aria-labelledby="user-heading">
+
+      <div class="user-left">
+        <div class="eyebrow">Python Playground</div>
+
+        <h1 id="user-heading">
+          A <em>real-world</em><br />
+          Django platform<br />
+          built to design & <span class="accent">explore more.</span>
+        </h1>
+
+        <p class="user-desc">
+          DjangoPlay is a <strong>modular enterprise backend</strong> showcasing
+          Django at its best — domain-driven design, service layers, audit
+          logging, policy engine, and subdomain routing.
+          Built for <strong>Python &amp; Django developers</strong> to learn and design from.
+        </p>
+
+        <div class="cta-row">
+          <!--
+            Primary CTA: links to the live application console.
+            Update this href if the path changes.
+          -->
+          <a href="/console/" target="_blank" class="btn-primary">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              aria-hidden="true">
+              <polygon points="5 3 19 12 5 21 5 3" />
+            </svg>
+            Open Platform
+          </a>
+
+          <a href="developer.html" class="btn-outline">
+            Meet the developer →
+          </a>
+
+          <div class="live-indicator">
+            <div class="live-dot" aria-hidden="true"></div>
+            <span>djangoplay.org is live</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="user-right" aria-hidden="true">
+        <div class="code-card">
+          <div class="code-header">
+            <div class="code-dots">
+              <span class="dot-r"></span>
+              <span class="dot-y"></span>
+              <span class="dot-g"></span>
+            </div>
+            <div class="code-filename">core/models/base.py</div>
+            <div class="code-lang">PYTHON</div>
+          </div>
+          <div class="code-body" id="code-animate"></div>
+        </div>
+      </div>
+
+    </section>
+
+    <hr class="full-divider" />
+
+    <!-- ── Tech stack ──────────────────────────────────────────────────── -->
+    <section class="stack-section" aria-labelledby="stack-heading">
+      <p class="section-label" id="stack-heading">Tech Stack</p>
+      <div class="stack-grid">
+
+        <div class="stack-item">
+          <div class="stack-icon" style="background:#E8F5E9;">🐍</div>
+          <div class="stack-name">Django 5 + DRF</div>
+          <div class="stack-desc">Core framework with Django REST Framework for REST APIs</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon" style="background:#E3F2FD;">🐘</div>
+          <div class="stack-name">PostgreSQL</div>
+          <div class="stack-desc">Primary relational database with pg_trgm extension</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon" style="background:#FFEBEE;">⚡</div>
+          <div class="stack-name">Redis</div>
+          <div class="stack-desc">Caching, session store &amp; Celery message broker</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon" style="background:#FFF3E0;">🌿</div>
+          <div class="stack-name">Celery</div>
+          <div class="stack-desc">Async background task workers with beat scheduling</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon" style="background:#F3E5F5;">🔐</div>
+          <div class="stack-name">JWT + Allauth</div>
+          <div class="stack-desc">Session &amp; token auth, Google SSO integration</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon" style="background:#E0F2F1;">📡</div>
+          <div class="stack-name">drf-spectacular</div>
+          <div class="stack-desc">Auto-generated OpenAPI 3 schema, Swagger &amp; Redoc</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon" style="background:#FBE9E7;">🌐</div>
+          <div class="stack-name">Nginx + Oracle VPS</div>
+          <div class="stack-desc">Production deployment on Oracle Cloud VPS</div>
+        </div>
+
+        <div class="stack-item">
+          <div class="stack-icon" style="background:#E8EAF6;">🔒</div>
+          <div class="stack-name">Fernet Encryption</div>
+          <div class="stack-desc">Credential encryption at rest in environment files</div>
+        </div>
+
+      </div>
+    </section>
+
+    <hr class="full-divider" />
+
+    <!-- ── Architecture highlights ─────────────────────────────────────── -->
+    <section class="arch-section" aria-labelledby="arch-heading">
+      <p class="section-label" id="arch-heading">Architecture Highlights</p>
+      <div class="arch-grid">
+
+        <div class="arch-card orange">
+          <div class="arch-number">16</div>
+          <div class="arch-title">Domain Apps</div>
+          <div class="arch-desc">
+            Every app maps to a real business domain — helpdesk, teams,
+            locations, identities, invoicing, and more. Each owns its
+            data, logic, and permissions.
+          </div>
+          <div class="arch-tags">
+            <span class="arch-tag">helpdesk</span>
+            <span class="arch-tag">teamcentral</span>
+            <span class="arch-tag">users</span>
+            <span class="arch-tag">entities</span>
+            <span class="arch-tag">invoices</span>
+          </div>
+        </div>
+
+        <div class="arch-card purple">
+          <div class="arch-number">5</div>
+          <div class="arch-title">Layered Architecture</div>
+          <div class="arch-desc">
+            Interface → Application → Domain → Platform → Infrastructure.
+            Views orchestrate, services decide. Business logic never
+            leaks into serializers or views.
+          </div>
+          <div class="arch-tags">
+            <span class="arch-tag">service layer</span>
+            <span class="arch-tag">DDD</span>
+            <span class="arch-tag">signals</span>
+            <span class="arch-tag">fail-closed</span>
+          </div>
+        </div>
+
+        <div class="arch-card red">
+          <div class="arch-number">∞</div>
+          <div class="arch-title">Platform Services</div>
+          <div class="arch-desc">
+            Audit logging, policy engine, mailer, issue tracker — shared
+            capabilities across every domain. Every state change is
+            observable and attributable.
+          </div>
+          <div class="arch-tags">
+            <span class="arch-tag">audit</span>
+            <span class="arch-tag">policyengine</span>
+            <span class="arch-tag">mailer</span>
+            <span class="arch-tag">issuetracker</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ── Footer ────────────────────────────────────────────────────────── -->
+  <footer>
+    <ul class="footer-nav">
+      <div class="footer-logo">
+        <img class="icon" src="assets/imgs/logo/text-logo.png" alt="DjangoPlay" />
+      </div>
+      <div class="footer-nav">        
+        <li><a href="/console/">Platform</a></li>
+        <li><a href="/docs/index.html" target="_blank" rel="noopener">Docs</a></li>
+    </ul>
+
+    <div class="footer-right">
+      &copy; <span id="footer-year"></span> DjangoPlay&nbsp;·[djangoplay.org]
+    </div>
+  </footer>
+
+  <script src="dist/js/bundle.min.js" defer></script>
+
+</body>
+
+</html>
