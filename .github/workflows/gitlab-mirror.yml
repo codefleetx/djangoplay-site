@@ -9,7 +9,7 @@ name: Mirror GitLab to GitHub
 #   GH_TOKEN      → GitHub PAT with repo, workflow scope
 #
 # Required variables (set in GitHub repo → Settings → Variables):
-#   GITLAB_REPO   → e.g. codefleet-labs/selenium  (the GitLab path)
+#   GITLAB_REPO   → e.g. djangoplay/djangoplay-site  (the GitLab path)
 
 on:
   repository_dispatch:
