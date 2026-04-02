@@ -8,7 +8,7 @@
     content="DjangoPlay — a modular, enterprise-grade Django backend platform built to showcase real-world Python engineering at its best." />
   <meta name="robots" content="index, follow" />
   <title>DjangoPlay Home</title>
-  <link rel="icon" type="image/png" href="assets/imgs/logo/dp-icon.png" />
+  <link rel="icon" type="image/png" href="/dist/brand/logo/dp-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -47,14 +47,12 @@
   <nav role="navigation" aria-label="Main navigation">
 
     <a href="index.html" class="nav-logo" aria-label="DjangoPlay home">
-      <img class="icon" src="assets/imgs/logo/dp-icon.png" alt="" />
-      <img class="wordmark" src="assets/imgs/logo/text-logo.png" alt="DjangoPlay" />
+      <img class="icon" src="/dist/brand/logo/dp-icon.png" alt="" />
+      <img class="wordmark" src="/dist/brand/logo/text-logo.png" alt="DjangoPlay" />
     </a>
-
     <ul class="nav-links">
       <li><a href="index.html" class="active">Home</a></li>
       <li><a href="developer.html">Developer</a></li>
-      <li><a href="/docs/index.html" target="_blank" rel="noopener">Docs</a></li>
     </ul>
 
     <div class="nav-right">
@@ -79,8 +77,21 @@
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
       </button>
-
       <span class="nav-badge">v1.0.0</span>
+
+      <!-- Dropdown -->
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" aria-label="Menu">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="dropdown-menu">
+          <li><a class="docs-link" target="_blank" rel="noopener">Docs</a></li>
+          <li><a class="issues-link" target="_blank" rel="noopener">Issues</a></li>
+        </ul>
+      </div>
     </div>
 
   </nav>
@@ -96,7 +107,7 @@
         <h1 id="user-heading">
           A <em>real-world</em><br />
           Django platform<br />
-          built to design & <span class="accent">explore more.</span>
+          built to <span class="accent"> design & explore more.</span>
         </h1>
 
         <p class="user-desc">
@@ -111,9 +122,9 @@
             Primary CTA: links to the live application console.
             Update this href if the path changes.
           -->
-          <a href="/console/" target="_blank" class="btn-primary">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              aria-hidden="true">
+          <a href="https://djangoplay.org/accounts/login/" target="_blank" class="btn-primary platform-link"
+            data-path="">
+            <svg width="14" height="14" viewBox="0 0 24 24" ...>
               <polygon points="5 3 19 12 5 21 5 3" />
             </svg>
             Open Platform
@@ -264,26 +275,29 @@
       </div>
     </section>
 
-  </main>
+    </main>
 
-  <!-- ── Footer ────────────────────────────────────────────────────────── -->
-  <footer>
-    <ul class="footer-nav">
-      <div class="footer-logo">
-        <img class="icon" src="assets/imgs/logo/text-logo.png" alt="DjangoPlay" />
+    <!-- ── Footer ────────────────────────────────────────────────────────── -->
+    <footer>
+      <ul class="footer-nav">
+        <div class="footer-logo">
+          <a href="https://djangoplay.org/" class="website-link" data-path="" target="_blank">
+            <img class="logo-text" src="/dist/brand/logo/text-logo.png" alt="DjangoPlay">
+          </a>
+          <span class="footer-version">v1.0.0</span>
+        </div>
+        <div class="footer-nav">
+          <li><a href="https://djangoplay.org/accounts/login" class="platform-link" target="_blank" rel="noopener" data-path="">Platform</a></li>
+          <li><a href="https://djangoplay.org/accounts/docs" class="docs-link" target="_blank" rel="noopener">Docs</a></li>
+        </div>
+      </ul>
+
+      <div class="footer-right">
+        &copy; <span id="footer-year"></span> DjangoPlay&nbsp;·[djangoplay.org]
       </div>
-      <div class="footer-nav">        
-        <li><a href="/console/">Platform</a></li>
-        <li><a href="/docs/index.html" target="_blank" rel="noopener">Docs</a></li>
-    </ul>
+    </footer>
 
-    <div class="footer-right">
-      &copy; <span id="footer-year"></span> DjangoPlay&nbsp;·[djangoplay.org]
-    </div>
-  </footer>
-
-  <script src="dist/js/bundle.min.js" defer></script>
-
+    <script src="dist/js/bundle.min.js" defer></script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 /**
  * portfolio.js — Portfolio Content Renderer
- * DjangoPlay Landing Site
+ * DjangoPlay Home Page
  *
  * Fetches content.json and populates all sections of developer.html.
  *
@@ -227,13 +227,28 @@
     if (linksEl) {
       fp.links.forEach(function (link) {
         const a = el('a', link.primary ? 'btn-primary' : 'btn-outline', link.label);
-        a.href = link.url;
-        if (!link.primary) {
-          a.target = '_blank';
-          a.rel = 'noopener noreferrer';
+        
+        // Add classes so site_config.js can find these later if needed
+        if (link.primary) {
+            a.classList.add('platform-link');
+            a.setAttribute('data-path', link.url.replace(/^\/+/, "")); // store path without leading slash
+        } else if (link.label.toLowerCase().includes('docs')) {
+            a.classList.add('docs-link');
         }
+        else if (link.label.toLowerCase().includes('issues')) {
+            a.classList.add('issues-link');
+        }
+
+        a.href = link.url;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+        
         linksEl.appendChild(a);
       });
+    }
+    // IMMEDIATELY try to resolve if config already exists
+    if (window.resolveSiteConfig) {
+        window.resolveSiteConfig();
     }
 
     const statsEl = document.getElementById('fp-stats');
@@ -357,7 +372,7 @@
 
   function init() {
     // Fetch encoded content.pkg instead of raw json
-    fetch('dist/content.pkg')
+    fetch('dist/json/content.pkg')
       .then(function (res) {
         if (!res.ok) throw new Error('content.pkg fetch failed: ' + res.status);
         return res.text();
@@ -373,11 +388,9 @@
         console.error('[portfolio.js]', err);
       });
   }
-
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
   }
-
 }());

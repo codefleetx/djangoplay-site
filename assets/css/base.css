@@ -1,6 +1,6 @@
 /*
  * base.css — Shared Layout & Components
- * DjangoPlay Landing Site
+ * DjangoPlay Homepage
  *
  * Contains: reset, body, nav, footer, shared utilities, section
  * scaffolding, buttons, badges, dividers, code card shell.
@@ -171,6 +171,12 @@ nav {
   gap: var(--space-4);
 }
 
+.nav-right > * {
+  display: flex;
+  align-items: center;
+  height: 32px;
+}
+
 .nav-badge {
   font-family: var(--font-mono);
   font-size: var(--text-badge);
@@ -206,6 +212,7 @@ nav {
   width: 14px;
   height: 14px;
   pointer-events: none;
+  stroke: currentColor;
 }
 
 /* Show sun in space mode, moon in light mode */
@@ -348,6 +355,10 @@ nav {
   transition: background var(--transition-slow), border-color var(--transition-slow);
 }
 
+.space-theme .code-header {
+  background: rgba(0, 0, 0, 0.75);
+}
+
 .code-dots { display: flex; gap: 6px; }
 .code-dots span {
   width: 12px;
@@ -361,7 +372,7 @@ nav {
 .code-filename {
   font-family: var(--font-mono);
   font-size: var(--text-badge);
-  color: var(--color-text-tertiary);
+  color: var(--code-header-text);
 }
 
 .code-lang {
@@ -406,19 +417,6 @@ nav {
 
 /* ─── Footer ─────────────────────────────────────────────────────────────── */
 
-/* footer {
-  border-top: 1px solid var(--color-rule);
-  padding: var(--space-8) var(--page-padding);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  max-width: var(--page-max);
-  margin: 0 auto;
-  transition: border-color var(--transition-slow);
-  flex-wrap: wrap;
-  gap: var(--space-4);
-} */
-
 footer {
   position: fixed;
   bottom: 0;
@@ -432,7 +430,7 @@ footer {
 
   display: flex;
   align-items: center;              /* vertical center */
-  justify-content: center;
+  justify-content: space-between;
   gap: var(--space-24);
 
   padding: 0 var(--page-padding);
@@ -445,10 +443,21 @@ footer {
   gap: var(--space-2);
 }
 
-.footer-logo img.icon {
-  height: 52px;
-  width: 52px;
+.footer-logo img.logo-text {
+  height: 10px;
+  width: auto;
   object-fit: contain;
+}
+
+.footer-logo img.logo-icon {
+  height: 10px;
+  width: auto;
+  object-fit: contain;
+}
+
+.footer-version {
+    font-size: 0.55rem;
+    color: #888;
 }
 
 .footer-nav {
@@ -473,8 +482,102 @@ footer {
   font-family: var(--font-mono);
   font-size: var(--text-badge);
   color: var(--color-text-tertiary);
+  padding-right: 12px;
 }
 
+.roadmap-date {
+  font-size: 11px;
+  color: #6a737d;
+  font-weight: 400;
+}
+
+/* ─── Nav Dropdown ───────────────────────────── */
+
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;   /* vertical align with theme + version */
+}
+
+/* Hamburger button */
+.dropdown-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-rule);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  cursor: pointer;
+  padding: 0;
+}
+
+.dropdown-toggle:hover {
+  border-color: var(--color-orange);
+}
+
+.hamburger {
+  width: 14px;
+  height: 1.5px;
+  background: var(--color-text-tertiary);
+}
+
+/* Dropdown menu */
+.dropdown-menu {
+  position: absolute;
+  top: calc(100% + 10px);
+  left: 50%;
+  transform: translateX(-50%) translateY(-12px);
+  transition: opacity 0.22s ease, transform 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  background: var(--color-surface);
+  border: 1px solid var(--color-rule);
+  border-radius: var(--radius-md);
+  list-style: none;
+  padding: 6px 0;
+  min-width: 120px;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.space-theme .dropdown-menu {
+  box-shadow: 0 10px 30px rgba(0,212,255,0.08);
+}
+
+.dropdown-menu.show {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* Divider between items */
+.dropdown-menu li {
+  border-bottom: 1px solid var(--color-rule);
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+/* Dropdown links */
+.dropdown-menu li a {
+  display: block;
+  padding: 10px 16px;
+  font-family: var(--font-mono);
+  font-size: var(--text-badge);
+  color: var(--color-text-tertiary);
+}
+
+.dropdown-menu li a:hover {
+  background: var(--color-surface-hover);
+  color: var(--color-text-primary);
+}
 
 /* ─── Animations ─────────────────────────────────────────────────────────── */
 
