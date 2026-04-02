@@ -7,7 +7,7 @@
   <meta name="robots" content="index, follow" />
   <title>Developer Portfolio</title>
 
-  <link rel="icon" type="image/png" href="assets/imgs/logo/dp-icon.png" />
+  <link rel="icon" type="image/png" href="/dist/brand/logo/dp-icon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
@@ -40,7 +40,7 @@
     </a>
     <a class="snav-item" href="#section-oss">
       <span class="snav-dot"></span>
-      <span class="snav-label">Libraries</span>
+      <span class="snav-label">PyPi Libraries</span>
     </a>
     <a class="snav-item" href="#section-repos">
       <span class="snav-dot"></span>
@@ -54,14 +54,15 @@
 
   <nav role="navigation" aria-label="Main navigation">
     <a href="index.html" class="nav-logo" aria-label="DjangoPlay home">
-      <img class="icon" src="assets/imgs/logo/dp-icon.png" alt="" />
-      <img class="wordmark" src="assets/imgs/logo/text-logo.png" alt="DjangoPlay" />
+      <img class="icon" src="/dist/brand/logo/dp-icon.png" alt="" />
+      <img class="wordmark" src="/dist/brand/logo/text-logo.png" alt="DjangoPlay" />
     </a>
+
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="developer.html" class="active">Developer</a></li>
-      <li><a href="docs/index.html" target="_blank" rel="noopener">Docs</a></li>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="developer.html">Developer</a></li>
     </ul>
+
     <div class="nav-right">
       <button class="theme-toggle-btn" id="theme-toggle-btn" aria-label="Switch to space theme"
         title="Toggle space theme">
@@ -81,11 +82,33 @@
           <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
         </svg>
       </button>
+
       <span class="nav-badge">v1.0.0</span>
+
+      <button id="roadmap-btn" class="theme-toggle-btn" title="What's Next?">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M4.5 19.5L9 18l9-9a3 3 0 0 0-3-3l-9 9-1.5 4.5z"/>
+          <path d="M14 6l4 4"/>
+        </svg>
+      </button>
+
+      <!-- Dropdown -->
+      <div class="nav-dropdown">
+        <button class="dropdown-toggle" aria-label="Menu">
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+          <span class="hamburger"></span>
+        </button>
+
+        <ul class="dropdown-menu">
+          <li><a class="docs-link" target="_blank" rel="noopener">Docs</a></li>
+          <li><a class="issues-link" target="_blank" rel="noopener">Issues</a></li>
+        </ul>
+      </div>
     </div>
   </nav>
 
-  <div class="page-wrap">
+  <main>>
 
     <!-- user -->
     <section id="section-user" class="dev-user" aria-labelledby="dev-name-heading">
@@ -206,24 +229,48 @@
       <div class="skills-grid" id="skills-grid"></div>
     </section>
 
-  </div><!-- /.page-wrap -->
+  </main>>
+
+  <div id="roadmap-modal" class="modal">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h2 id="roadmap-title">What's Next?!</h2>
+          <p class="roadmap-intro">
+            Here's what I'm currently working on and what's coming next for DjangoPlay.
+          </p>
+        </div>
+        <span id="roadmap-close">&times;</span>
+      </div>
+
+      <div id="roadmap-body"></div>
+
+      <div class="roadmap-footer">
+        If you have suggestions or feedback, feel free to reach out at
+        <a href="mailto:contact@djangoplay.org">contact@djangoplay.org</a>
+      </div>
+    </div>
+  </div>
 
   <footer>
 
     <ul class="footer-nav">
       <div class="footer-logo">
-        <img class="icon" src="assets/imgs/logo/text-logo.png" alt="DjangoPlay" />
-      </div>
-      <div class="footer-nav">        
-        <li><a href="/console/" target="_blank" rel="noopener">Platform</a></li>
-        <li><a href="/docs/index.html" target="_blank" rel="noopener">Docs</a></li>   
+          <a href="https://djangoplay.org/" class="website-link" data-path="" target="_blank">
+            <img class="logo-text" src="/dist/brand/logo/text-logo.png" alt="DjangoPlay">
+          </a>
+          <span class="footer-version">v1.0.0</span>
+        </div>
+      <div class="footer-nav">
+        <li><a href="https://djangoplay.org/accounts/login" class="platform-link" target="_blank" rel="noopener" data-path="">Platform</a></li>
+        <li><a href="https://djangoplay.org/accounts/docs" class="docs-link" target="_blank" rel="noopener">Docs</a></li>
       </div>
     </ul>
     <div class="footer-right">
       &copy; <span id="footer-year"></span> DjangoPlay&nbsp;·[djangoplay.org]
     </div>
   </footer>
-
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
   <script src="dist/js/bundle.min.js" defer></script>
 
 </body>

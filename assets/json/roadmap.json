@@ -1,0 +1,33 @@
+{
+  "title": "What's Next?!",
+  "sections": [
+    {
+      "label": "In Progress",
+      "items": [
+        "⚙️ Optimize Delivery of CSS, JS, and Static Content on Core Platform"
+      ]
+    },
+    {
+      "label": "Planned",
+      "items": [
+        "#### 1. DjangoPlay Platform:",
+        "  - Conversational AI Integration with ChatGPT",
+        "#### 2. DjangoPlay CLI:",
+        "  - ```dplay ci-actions``` using GPT-5 mini",
+        ""
+      ]
+    },
+    {
+        "label": "Future",
+        "items": [
+            "• Notifications System",
+            "• Organization Dashboard",
+            "• Audit Log Viewer UI",
+            "• Team Permissions System",
+            "• Public REST API",
+            "• Python SDK",
+            "• AI Policy Engine"
+        ]
+        }
+  ]
+}

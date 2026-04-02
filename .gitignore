@@ -36,9 +36,11 @@ project_tree.txt
 # Never commit real photos or credentials here.
 # Profile photos are uploaded directly to the server — not committed.
 # See README.md → Profile photo section.
-assets/imgs/photo/profile_photo_original.png
+assets/brand/*
 
 # ── Deploy artifacts ──────────────────────────────────────────────────────────
 # deploy.sh is committed, but any generated output is not.
-deploy/*.log
 .history
+assets/json/site_config.json
+!dist/
+*git-diff-patch-with-stats*
