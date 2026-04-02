@@ -1,7 +1,5 @@
 /**
- * theme.js — Theme Toggle
- * DjangoPlay Landing Site
- *
+ * theme.js — Theme Toggle *
  * Responsibilities:
  *   - Read saved theme from localStorage on page load
  *   - Apply "space-theme" class to <html> element

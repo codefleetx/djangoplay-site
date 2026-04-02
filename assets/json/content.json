@@ -36,7 +36,7 @@
         "icon": "pypi"
       }
     ],
-    "photo": "assets/imgs/photo/profile_photo.240x240.png"
+    "photo": "/dist/brand/photo/profile_photo.240x240.png"
   },
 
   "pursuing": {
@@ -75,7 +75,7 @@
     "heading": "From understanding how systems break — to building systems that don't.",
     "items": [
       {
-        "period": "2024 – Present",
+        "period": "2025 – Present",
         "role": "Independent — Building DjangoPlay",
         "org": "djangoplay.org",
         "highlight": true,
@@ -129,14 +129,14 @@
   "featured_project": {
     "tag": "Independent · Live",
     "title_line1": "Enterprise-grade Django",
-    "title_line2": "built to explore.",
+    "title_line2": "built to design & explore more.",
     "paragraphs": [
       "A <strong>modular backend platform</strong> built after leaving full-time employment — a deliberate engineering exercise with no shortcuts. Domain-driven design, service layers, centralised policy engine, append-only audit logging, JWT + Google SSO, subdomain routing, background tasks, and a full OpenAPI 3 schema. Deployed on Oracle VPS behind Nginx.",
       "Three PyPI libraries were extracted from this project: <strong>genericissuetracker</strong>, <strong>djangoplay-cli</strong>, and <strong>filemerger-cli</strong>."
     ],
     "tags": ["Django 5", "DRF", "PostgreSQL", "Redis", "Celery", "JWT + Allauth", "drf-spectacular", "django-hosts", "simple-history", "Nginx", "Oracle VPS"],
     "links": [
-      { "label": "Open Platform", "url": "/console/", "primary": true },
+      { "label": "Open Platform", "url": "", "primary": true },
       { "label": "View Source →", "url": "https://gitlab.com/djangoplay/djangoplay-web", "primary": false },
       { "label": "GitHub Mirror →", "url": "https://github.com/codefleetx/djangoplay-web", "primary": false }
     ],

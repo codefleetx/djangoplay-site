@@ -1,6 +1,6 @@
 /*
  * tokens.css — Design Tokens
- * DjangoPlay Landing Site
+ * DjangoPlay Home Page
  *
  * This file is the single source of truth for all design values.
  * Every colour, spacing unit, font, and radius used across the site
@@ -83,7 +83,6 @@
 .space-theme {
   --color-bg: #000000;
   --color-surface: rgba(0, 0, 0, 0.70);
-  --color-rule: rgba(255, 255, 255, 0.12);
   --color-surface-hover: rgba(255, 255, 255, 0.06);
 
   --color-ink: #e0f7ff;
@@ -124,9 +123,9 @@
   --color-rule: rgba(255, 255, 255, 0.25); 
 
   /* Component Overrides */
-  --card-bg: rgba(0, 0, 0, 0.65);
+  --card-bg: rgba(0, 0, 0, 0.55);
   --card-border: rgba(255, 255, 255, 0.15);
-  --code-header-bg: rgba(255, 255, 255, 0.05);  
+  --code-header-bg:  rgba(0, 0, 0, 0.75);
 }
 
 /* FORCE FIX: This ensures that when <html> has the .space-theme class,
@@ -247,21 +246,3 @@ html.space-theme .btn-primary:hover {
   /* Code block header */
   --code-header-bg: #F7F7FB;
 }
-/* 
-.space-theme {
-  --btn-primary-bg: #1da1f2;
-  --btn-primary-color: #ffffff;
-  --btn-primary-hover: #0d8bd9;
-
-  --card-bg: rgba(0, 0, 0, 0.55);
-  --card-border: rgba(255, 255, 255, 0.10);
-  --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.30), 0 20px 60px rgba(0, 212, 255, 0.05);
-  --card-shadow-hover: 0 4px 20px rgba(0, 212, 255, 0.12);
-  --card-border-hover: rgba(0, 212, 255, 0.30);
-
-  --badge-bg: rgba(0, 212, 255, 0.10);
-  --badge-color: #00d4ff;
-  --badge-border: rgba(0, 212, 255, 0.22);
-
-  --code-header-bg: rgba(255, 255, 255, 0.04);
-} */

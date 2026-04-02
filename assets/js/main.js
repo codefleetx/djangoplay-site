@@ -1,6 +1,6 @@
 /**
  * main.js — Page Initialisation
- * DjangoPlay Landing Site
+ * DjangoPlay Home Page
  *
  * Handles small page-level utilities that don't belong in theme.js
  * or space.js:

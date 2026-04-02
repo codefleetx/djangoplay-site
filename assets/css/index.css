@@ -1,6 +1,6 @@
 /*
  * index.css — Index Page Styles
- * DjangoPlay Landing Site
+ * DjangoPlay Home Page
  *
  * Covers: user section, tech-stack grid, architecture cards.
  * Depends on: tokens.css, base.css (load those first).
@@ -250,6 +250,11 @@ h1 .accent { color: var(--color-red); }
   text-shadow: 0 0 20px rgba(0, 212, 255, 0.2); /* Subtle glow effect */
 }
 
+.badge-arrow {
+  font-size: 10px;
+  margin-left: 4px;
+  opacity: 0.6;
+}
 
 /* Animated Code Block Styling */
 /* Python Syntax Highlighting */
